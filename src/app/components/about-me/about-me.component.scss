@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+.custom-font {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.styled-text {
+  color: #222;
+  letter-spacing: 1.5px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+
+.styled-text span {
+  display: inline-block;
+  opacity: 0; /* Initial opacity for GSAP animation */
+}
