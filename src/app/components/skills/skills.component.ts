@@ -4,11 +4,10 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 @Component({
-  selector: 'app-skills',
-  standalone: true,
-  imports: [],
-  templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+    selector: 'app-skills',
+    imports: [],
+    templateUrl: './skills.component.html',
+    styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
   platformId = inject(PLATFORM_ID);
