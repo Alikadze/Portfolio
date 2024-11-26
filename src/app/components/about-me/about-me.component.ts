@@ -4,11 +4,10 @@ import { PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
-  selector: 'app-about-me',
-  standalone: true,
-  imports: [],
-  templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.scss'
+    selector: 'app-about-me',
+    imports: [],
+    templateUrl: './about-me.component.html',
+    styleUrl: './about-me.component.scss'
 })
 export class AboutMeComponent implements AfterViewInit {
   platformId = inject(PLATFORM_ID);

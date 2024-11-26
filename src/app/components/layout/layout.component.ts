@@ -7,11 +7,10 @@ import { ProjectsComponent } from "../projects/projects.component";
 import { ContactMeComponent } from "../contact-me/contact-me.component";
 
 @Component({
-  selector: 'app-layout',
-  standalone: true,
-  imports: [HeaderComponent, FooterComponent, AboutMeComponent, SkillsComponent, ProjectsComponent, ContactMeComponent],
-  templateUrl: './layout.component.html',
-  styleUrl: './layout.component.scss'
+    selector: 'app-layout',
+    imports: [HeaderComponent, FooterComponent, AboutMeComponent, SkillsComponent, ProjectsComponent, ContactMeComponent],
+    templateUrl: './layout.component.html',
+    styleUrl: './layout.component.scss'
 })
 export class LayoutComponent {
 }
