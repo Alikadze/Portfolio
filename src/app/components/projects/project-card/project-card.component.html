@@ -1,0 +1,38 @@
+<div
+    class="group transition-transform duration-500 transform hover:scale-105 hover:shadow-2xl"
+>
+    <div [ngClass]="headingColor()" class="text-center text-2xl mb-2 py-2 rounded-2xl group-hover:text-yellow-200 transition-colors duration-500">
+        {{ heading() }}
+    </div>
+    <div
+        [ngClass]="borderColor()"
+        class="bg-white max-w-full sm:w-[300px] lg:w-[600px] h-96 border-[3px] rounded-xl overflow-hidden transition-transform duration-500 group-hover:scale-[1.02] group-hover:shadow-lg"
+    >
+        <div class="h-[83.5%] overflow-hidden">
+            <img
+                [src]="imgSrc()"
+                alt="Card header image"
+                class="w-full h-auto transition-transform duration-500 group-hover:scale-110"
+            >
+        </div>
+
+        <div class="flex h-16">
+            <a
+                [href]="githubURL()"
+                target="_blank"
+                matTooltip="View Source Code"
+                class="bg-gray-200 flex justify-center items-center w-full hover:bg-gray-300 transition-all duration-500 cursor-pointer"
+            >
+                <img class="w-32" src="./assets/images/github.png" alt="GitHub logo">
+            </a>
+            <a
+                [href]="projectURL()"
+                target="_blank"
+                matTooltip="Visit Page"
+                class="bg-yellow-400 flex items-center justify-center w-full hover:bg-yellow-500 transition-all duration-500 cursor-pointer"
+            >
+                <mat-icon class="text-5xl !w-12 !h-10 -mt-1">web</mat-icon>
+            </a>
+        </div>
+    </div>
+</div>
