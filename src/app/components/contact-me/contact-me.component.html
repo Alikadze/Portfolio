@@ -1,3 +1,172 @@
-<div class="bg-gradient-to-b from-gray-700 to-gray-600 w-full h-[700px] bg-blue-400">
+<div class="contact-section">
+  <!-- Main Content -->
+  <div class="content-wrapper">
+    <div class="contact-container">
+      
+      <!-- Section Header -->
+      <div class="section-header">
+        <div class="section-tag">
+          <span>Get In Touch</span>
+        </div>
+        <h2 class="section-title">
+          <span class="title-word">Let's</span>
+          <span class="title-word highlight-word">Connect</span>
+        </h2>
+        <p class="section-description">
+          Ready to bring your ideas to life? Let's discuss how we can 
+          <span class="highlight-text">create something amazing together</span>
+        </p>
+      </div>
 
+      <!-- Contact Content Grid -->
+      <div class="contact-grid">
+        
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+          <div class="form-header">
+            <h3 class="form-title">Send a Message</h3>
+            <p class="form-subtitle">I'll get back to you within 24 hours</p>
+          </div>
+          
+          <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <div class="form-group">
+              <label for="name" class="form-label">Full Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name"
+                [(ngModel)]="formData.name"
+                class="form-input" 
+                placeholder="Enter your full name"
+                required
+              >
+              <div class="input-border"></div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email"
+                [(ngModel)]="formData.email"
+                class="form-input" 
+                placeholder="Enter your email address"
+                required
+              >
+              <div class="input-border"></div>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject"
+                [(ngModel)]="formData.subject"
+                class="form-input" 
+                placeholder="What's this about?"
+                required
+              >
+              <div class="input-border"></div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea 
+                id="message" 
+                name="message"
+                [(ngModel)]="formData.message"
+                class="form-textarea" 
+                placeholder="Tell me about your project or idea..."
+                rows="5"
+                required
+              ></textarea>
+              <div class="input-border"></div>
+            </div>
+            
+            <button type="submit" class="submit-btn" [disabled]="!contactForm.form.valid">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-icon">🚀</span>
+              <div class="btn-glow"></div>
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info-card">
+          <div class="info-header">
+            <h3 class="info-title">Let's Talk</h3>
+            <p class="info-subtitle">Multiple ways to reach out</p>
+          </div>
+          
+          <div class="contact-methods">
+            <!-- Email -->
+            <div class="contact-method">
+              <div class="method-icon email-icon">
+                <span>📧</span>
+              </div>
+              <div class="method-content">
+                <h4 class="method-title">Email</h4>
+                <p class="method-text">ralikadze&#64;gmail.com</p>
+                <a href="mailto:ralikadze@gmail.com" class="method-link">Send an email</a>
+              </div>
+            </div>
+            
+            <!-- Phone -->
+            <div class="contact-method">
+              <div class="method-icon phone-icon">
+                <span>📞</span>
+              </div>
+              <div class="method-content">
+                <h4 class="method-title">Phone</h4>
+                <p class="method-text">+995 579 343 076</p>
+                <a href="tel:+995579343076" class="method-link">Give me a call</a>
+              </div>
+            </div>
+            
+            <!-- Location -->
+            <div class="contact-method">
+              <div class="method-icon location-icon">
+                <span>📍</span>
+              </div>
+              <div class="method-content">
+                <h4 class="method-title">Location</h4>
+                <p class="method-text">Batumi, Georgia</p>
+                <span class="method-link">Available for remote work</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Social Media Links -->
+          <div class="social-section">
+            <h4 class="social-title">Follow Me</h4>
+            <div class="social-links">
+              <a href="https://github.com/Alikadze" target="_blank" class="social-link github">
+                <span class="social-icon">📱</span>
+                <span class="social-name">GitHub</span>
+              </a>
+              <a href="https://linkedin.com/in/rezoalikadze" target="_blank" class="social-link linkedin">
+                <span class="social-icon">💼</span>
+                <span class="social-name">LinkedIn</span>
+              </a>
+              <a href="https://twitter.com/rezoalikadze" target="_blank" class="social-link twitter">
+                <span class="social-icon">🐦</span>
+                <span class="social-name">Twitter</span>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Availability Status -->
+          <div class="availability-card">
+            <div class="status-indicator available"></div>
+            <div class="status-content">
+              <h4 class="status-title">Available for Work</h4>
+              <p class="status-text">Currently accepting new projects and opportunities</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
