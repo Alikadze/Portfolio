@@ -1,0 +1,396 @@
+// Footer Section - Modern Glassmorphism Design
+.footer-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #0f0f23 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(147, 51, 234, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+// Animated Background
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.02), transparent);
+  animation: bgFlow 25s ease-in-out infinite alternate;
+}
+
+@keyframes bgFlow {
+  0% { transform: translateX(-50px) translateY(-25px) rotate(0deg); }
+  100% { transform: translateX(50px) translateY(25px) rotate(180deg); }
+}
+
+// Floating Shapes
+.floating-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(1px);
+  animation: float 20s ease-in-out infinite;
+  
+  &.shape-1 {
+    width: 60px;
+    height: 60px;
+    top: 20%;
+    left: 15%;
+    animation-delay: 0s;
+    background: rgba(59, 130, 246, 0.03);
+  }
+  
+  &.shape-2 {
+    width: 80px;
+    height: 80px;
+    top: 60%;
+    right: 20%;
+    animation-delay: 3s;
+    background: rgba(147, 51, 234, 0.03);
+  }
+  
+  &.shape-3 {
+    width: 100px;
+    height: 100px;
+    bottom: 30%;
+    left: 60%;
+    animation-delay: 6s;
+    background: rgba(16, 185, 129, 0.03);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(180deg); }
+}
+
+// Footer Content
+.footer-content {
+  position: relative;
+  z-index: 10;
+  padding: 3rem 2rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Footer Grid
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (max-width: 1024px) and (min-width: 769px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+// Brand Section
+.footer-brand {
+  .brand-content {
+    max-width: 300px;
+  }
+}
+
+.brand-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-tagline {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.brand-description {
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+// Footer Sections
+.footer-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 1.5rem;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 1px;
+  }
+}
+
+// Quick Links
+.links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-link {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  
+  &:hover {
+    color: #3b82f6;
+    transform: translateX(5px);
+    
+    &::before {
+      width: 100%;
+    }
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #3b82f6;
+    transition: width 0.3s ease;
+  }
+}
+
+// Contact Info
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-icon {
+  font-size: 1rem;
+  width: 1.5rem;
+  text-align: center;
+}
+
+.contact-text {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: #3b82f6;
+  }
+}
+
+// Social Media
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 0.75rem;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(59, 130, 246, 0.3);
+    color: #e2e8f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+  }
+}
+
+.social-icon {
+  font-size: 1.125rem;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+  transform: scale(1.1);
+}
+
+// Footer Bottom
+.footer-bottom {
+  padding-top: 2rem;
+}
+
+.footer-separator {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  margin-bottom: 2rem;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+.copyright {
+  p {
+    font-size: 0.875rem;
+    color: #64748b;
+  }
+}
+
+.tech-stack {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.tech-text {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.tech-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tech-badge {
+  padding: 0.25rem 0.75rem;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #93c5fd;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.4);
+    transform: translateY(-1px);
+  }
+}
+
+// Responsive Design
+@media (max-width: 480px) {
+  .footer-content {
+    padding: 2rem 1rem 1rem;
+  }
+  
+  .footer-grid {
+    gap: 1.5rem;
+  }
+  
+  .brand-name {
+    font-size: 1.5rem;
+  }
+  
+  .social-links {
+    gap: 0.75rem;
+  }
+  
+  .social-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+.flex a:nth-child(2) {
+  animation: float 3s ease-in-out infinite 0.5s;
+}
+
+.flex a:nth-child(3) {
+  animation: float 3s ease-in-out infinite 1s;
+}
+
+.flex a:nth-child(4) {
+  animation: float 3s ease-in-out infinite 1.5s;
+}

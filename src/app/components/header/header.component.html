@@ -1,3 +1,96 @@
-<div class="header z-50 w-2/5 h-12 border-2 border-black bg-slate-600 opacity-45 bg-transparent rounded-3xl top-5 left-[29%] fixed">
+<header class="modern-header">
+  <!-- Background Effects -->
+  <div class="header-background">
+    <div class="bg-blur"></div>
+    <div class="bg-border"></div>
+  </div>
 
-</div>
+  <!-- Navigation -->
+  <nav class="navigation">
+    <div class="nav-items">
+      <button 
+        (click)="smoothScrollTo('about')" 
+        class="nav-item"
+        [class.active]="activeSection === 'about'"
+      >
+        <span class="nav-text">About</span>
+        <div class="nav-indicator"></div>
+        <div class="nav-glow"></div>
+      </button>
+      
+      <button 
+        (click)="smoothScrollTo('skills')" 
+        class="nav-item"
+        [class.active]="activeSection === 'skills'"
+      >
+        <span class="nav-text">Skills</span>
+        <div class="nav-indicator"></div>
+        <div class="nav-glow"></div>
+      </button>
+      
+      <button 
+        (click)="smoothScrollTo('projects')" 
+        class="nav-item"
+        [class.active]="activeSection === 'projects'"
+      >
+        <span class="nav-text">Projects</span>
+        <div class="nav-indicator"></div>
+        <div class="nav-glow"></div>
+      </button>
+      
+      <button 
+        (click)="smoothScrollTo('contact')" 
+        class="nav-item"
+        [class.active]="activeSection === 'contact'"
+      >
+        <span class="nav-text">Contact</span>
+        <div class="nav-indicator"></div>
+        <div class="nav-glow"></div>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Toggle -->
+  <button class="mobile-menu-toggle" (click)="toggleMobileMenu()">
+    <div class="hamburger-line" [class.active]="isMobileMenuOpen"></div>
+    <div class="hamburger-line" [class.active]="isMobileMenuOpen"></div>
+    <div class="hamburger-line" [class.active]="isMobileMenuOpen"></div>
+  </button>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" [class.open]="isMobileMenuOpen">
+    <div class="mobile-nav-content">
+      <button 
+        (click)="smoothScrollTo('about'); closeMobileMenu()" 
+        class="mobile-nav-item"
+      >
+        <span class="mobile-nav-icon">👤</span>
+        <span class="mobile-nav-text">About</span>
+      </button>
+      
+      <button 
+        (click)="smoothScrollTo('skills'); closeMobileMenu()" 
+        class="mobile-nav-item"
+      >
+        <span class="mobile-nav-icon">⚡</span>
+        <span class="mobile-nav-text">Skills</span>
+      </button>
+      
+      <button 
+        (click)="smoothScrollTo('projects'); closeMobileMenu()" 
+        class="mobile-nav-item"
+      >
+        <span class="mobile-nav-icon">🚀</span>
+        <span class="mobile-nav-text">Projects</span>
+      </button>
+      
+      <button 
+        (click)="smoothScrollTo('contact'); closeMobileMenu()" 
+        class="mobile-nav-item"
+      >
+        <span class="mobile-nav-icon">📧</span>
+        <span class="mobile-nav-text">Contact</span>
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,13 +1,81 @@
-<div class="overflow-x-hidden">
-  <app-header/>
+<!-- Loading Screen -->
+<div *ngIf="isLoading" class="fixed inset-0 bg-gray-900 flex items-center justify-center z-[100]">
+  <div class="text-center">
+    <div class="loader mb-4"></div>
+    <h2 class="text-white text-2xl font-bold">Loading Portfolio...</h2>
+    <p class="text-gray-300">Rezo Alikadze</p>
+  </div>
+</div>
 
-  <app-about-me/>
+<!-- Main Content -->
+<div [class.hidden]="isLoading" class="main-layout">
+  <!-- Unified Background -->
+  <div class="unified-background">
+    <div class="background-container">
+      <div class="animated-bg"></div>
+      <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+      </div>
+    </div>
+  </div>
 
-  <app-skills/>
+  <!-- Content Sections -->
+  <div class="content-sections">
+    <!-- <app-header/> -->
 
-  <app-projects/>
+    <section id="about" class="section">
+      <app-about-me/>
+    </section>
 
-  <app-contact-me/>
+    <!-- Divider -->
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-glow"></div>
+    </div>
 
-  <app-footer/>
+    <section id="skills" class="section">
+      <app-skills/>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-glow"></div>
+    </div>
+
+    <section id="projects" class="section">
+      <app-projects/>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-glow"></div>
+    </div>
+
+    <section id="contact" class="section">
+      <app-contact-me/>
+    </section>
+
+    <app-footer/>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button 
+    *ngIf="showScrollToTop"
+    (click)="scrollToTop()"
+    class="scroll-to-top-btn"
+    title="Scroll to top"
+  >
+    <div class="btn-background"></div>
+    <div class="btn-content">
+      <mat-icon class="btn-icon">keyboard_arrow_up</mat-icon>
+    </div>
+    <div class="btn-glow"></div>
+    <div class="btn-ripple"></div>
+  </button>
 </div>

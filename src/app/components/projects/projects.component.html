@@ -1,49 +1,143 @@
-<div class="bg-gradient-to-b from-gray-800 to-gray-700 w-full parallax">
-    <div class="w-full flex justify-center h-fit text-4xl font-bold text-slate-200 pt-56 -ml-4 -mb-3 glowing-text">
-        PROJECTS
+<div class="projects-section">
+  <!-- Main Content -->
+  <div class="content-wrapper">
+    <div class="projects-container">
+      
+      <!-- Section Header -->
+      <div class="section-header">
+        <div class="section-tag">
+          <span>My Work</span>
+        </div>
+        <h2 class="section-title">
+          <span class="title-word">Featured</span>
+          <span class="title-word highlight-word">Projects</span>
+        </h2>
+        <p class="section-description">
+          Showcasing innovative solutions built with 
+          <span class="highlight-text">modern technologies and creative problem-solving</span>
+        </p>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        
+        <!-- Caesar Games Project -->
+        <div class="project-card" data-project="caesar-games">
+          <div class="project-image-container">
+            <img src="./assets/images/img_3.png" alt="Caesar Games" class="project-image">
+            <div class="project-overlay">
+              <div class="project-tech-stack">
+                <span class="tech-tag">Angular</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">SCSS</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Caesar Games</h3>
+            <p class="project-description">
+              Modern gaming platform with interactive user experience and responsive design
+            </p>
+            <div class="project-links">
+              <a href="https://beta.caesargames.net/" target="_blank" class="project-link live-link">
+                <span class="link-icon">🚀</span>
+                Live Demo
+              </a>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </div>
+
+        <!-- GMG Arch Group Project -->
+        <div class="project-card" data-project="gmg-arch">
+          <div class="project-image-container">
+            <img src="./assets/images/img_2.png" alt="GMG Arch Group" class="project-image">
+            <div class="project-overlay">
+              <div class="project-tech-stack">
+                <span class="tech-tag">Angular</span>
+                <span class="tech-tag">Material UI</span>
+                <span class="tech-tag">Responsive</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">GMG Arch Group</h3>
+            <p class="project-description">
+              Professional architecture firm website with modern design and portfolio showcase
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/Alikadze/GMG-Arch-group" target="_blank" class="project-link github-link">
+                <span class="link-icon">📱</span>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </div>
+
+        <!-- Task Manager Project -->
+        <div class="project-card" data-project="task-manager">
+          <div class="project-image-container">
+            <img src="./assets/images/img.png" alt="Task Manager" class="project-image">
+            <div class="project-overlay">
+              <div class="project-tech-stack">
+                <span class="tech-tag">Angular</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">PWA</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Task Manager</h3>
+            <p class="project-description">
+              Full-stack productivity application with real-time updates and cloud synchronization
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/Alikadze/Task-Manager" target="_blank" class="project-link github-link">
+                <span class="link-icon">📱</span>
+                GitHub
+              </a>
+              <a href="https://task-manager-e76b7.web.app/" target="_blank" class="project-link live-link">
+                <span class="link-icon">🚀</span>
+                Live Demo
+              </a>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </div>
+
+        <!-- Ecommerce Project -->
+        <div class="project-card" data-project="ecommerce">
+          <div class="project-image-container">
+            <img src="./assets/images/img_1.png" alt="Ecommerce Platform" class="project-image">
+            <div class="project-overlay">
+              <div class="project-tech-stack">
+                <span class="tech-tag">Angular</span>
+                <span class="tech-tag">NgRx</span>
+                <span class="tech-tag">Firebase</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Ecommerce Platform</h3>
+            <p class="project-description">
+              Complete online shopping solution with cart management and secure payment integration
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/Alikadze/Ecommerce" target="_blank" class="project-link github-link">
+                <span class="link-icon">📱</span>
+                GitHub
+              </a>
+              <a href="https://ecommerce-44b58.web.app/" target="_blank" class="project-link live-link">
+                <span class="link-icon">🚀</span>
+                Live Demo
+              </a>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </div>
+
+      </div>
     </div>
-
-    <div class="main-container pt-16 -ml-14">
-        <section class="flex justify-center items-center panel red fade-in">
-            <app-project-card
-                heading="Caesar Games"
-                headingColor="bg-fuchsia-300"
-                borderColor="border-fuchsia-500"
-                projectURL="https://beta.caesargames.net/"
-                imgSrc="./assets/images/img_3.png"
-            ></app-project-card>
-        </section>
-
-        <section class="flex justify-center items-center w-[300px] h-[600px] panel yellow fade-in">
-            <app-project-card
-                heading="GMG Arch Group"
-                headingColor="bg-blue-300"
-                borderColor="border-blue-500"
-                githubURL="https://github.com/Alikadze/GMG-Arch-group"
-                imgSrc="./assets/images/img_2.png"
-            ></app-project-card>
-        </section>
-
-        <section class="flex justify-center items-center w-[300px] panel blue fade-in">
-            <app-project-card
-                heading="Task Manager"
-                headingColor="bg-red-300"
-                borderColor="border-red-500"
-                githubURL="https://github.com/Alikadze/Task-Manager"
-                projectURL="https://task-manager-e76b7.web.app/"
-                imgSrc="./assets/images/img.png"
-            ></app-project-card>
-        </section>
-
-        <section class="flex justify-center items-center w-[300px] panel blue fade-in">
-            <app-project-card
-                heading="Ecommerce"
-                headingColor="bg-green-300"
-                borderColor="border-green-500"
-                githubURL="https://github.com/Alikadze/Ecommerce"
-                projectURL="https://ecommerce-44b58.web.app/"
-                imgSrc="./assets/images/img_1.png"
-            ></app-project-card>
-        </section>
-    </div>
+  </div>
 </div>

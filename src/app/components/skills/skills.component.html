@@ -1,67 +1,188 @@
-<div class="flex gap-36 pl-28 bg-gradient-to-b from-gray-950 to-gray-800 w-full min-h-[800px] pt-48 !cursor-default">
-
-    <div class="about-me w-2/5">
-        <app-about-me-info/>
-    </div>
-
-    <div class="relative skills border-2 border-slate-300 h-auto w-2/5 rounded-xl bg-transparent mt-56 p-5">
-        <div class="text-3xl font-bold text-slate-100 text-center my-5 transition-colors duration-300 hover:text-blue-400">
-          Skills
+<div class="skills-section">
+  <!-- Main Content -->
+  <div class="content-wrapper">
+    <div class="skills-container">
+      
+      <!-- Section Header -->
+      <div class="section-header">
+        <div class="section-tag">
+          <span>What I do best</span>
         </div>
+        <h2 class="section-title">
+          <span class="title-word">Technical</span>
+          <span class="title-word highlight-word">Skills</span>
+        </h2>
+        <p class="section-description">
+          Crafting digital experiences with cutting-edge technologies and 
+          <span class="highlight-text">modern development practices</span>
+        </p>
+      </div>
 
-        <div class="grid grid-cols-3 gap-5">
-          <div class="flex flex-col items-center p-4 bg-gradient-to-r from-blue-500 to-blue-700 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-16 h-16 mb-2"/>
-            <span class="text-white">JavaScript</span>
-          </div>
-
-          <div class="flex flex-col items-center p-4 bg-gradient-to-r from-green-500 to-green-700 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg" alt="C#" class="w-16 h-16 mb-2"/>
-            <span class="text-white">C#</span>
-          </div>
-
-          <div class="flex flex-col items-center p-4 bg-gradient-to-r from-red-500 to-red-700 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" class="w-16 h-16 mb-2"/>
-            <span class="text-white">Angular</span>
-          </div>
-
-          <div class="absolute w-[2px] h-[400px] top-[105px] left-[189.5px] bg-white !text-transparent">.</div>
-          <div class="absolute w-[2px] h-[400px] top-[105px] right-[189px] bg-white !text-transparent">.</div>
-
-
-          <div class="flex flex-col items-center p-4 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="w-16 h-16 mb-2"/>
-            <span class="text-white">TypeScript</span>
-          </div>
-
-
-          <div class="flex flex-col items-center p-4 bg-gradient-to-r from-purple-500 to-purple-700 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-            <img src="/assets/images/NET_Core_Logo.svg.png" alt="ASP.NET Core" class="w-16 h-16 mb-2"/>
-            <span class="text-white">ASP.NET Core</span>
-          </div>
-
-          <div class="flex flex-col items-center p-4 bg-gradient-to-r from-purple-700 to-purple-900 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-            <img src="/assets/images/ngrx.svg" alt="NgRx" class="w-16 h-16 mb-2"/>
-            <span class="text-white">NgRx</span>
-          </div>
-
-          <div class="flex flex-col items-center p-4 bg-gradient-to-r from-teal-500 to-teal-700 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-            <div class="flex">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="w-16 h-16 mb-2"/>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="w-16 h-16 mb-2"/>
+      <!-- Skills Grid -->
+      <div class="skills-grid">
+        
+        <!-- Frontend Technologies Card -->
+        <div class="skill-category-card">
+          <div class="card-header">
+            <div class="category-icon frontend-icon">
+              <span>💻</span>
             </div>
-            <span class="text-white">HTML/CSS</span>
+            <h3 class="card-title">Languages</h3>
           </div>
-
-          <div class="flex flex-col items-center p-4 bg-gradient-to-r from-yellow-500 to-yellow-700 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="w-16 h-16 mb-2"/>
-            <span class="text-white">Firebase</span>
-          </div>
-
-          <div class="flex flex-col items-center p-4 bg-gradient-to-r from-blue-400 to-blue-500 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-            <img src="/assets/images/1_mUISLg4ghf6QYT_f1-cnlg.png" alt="Tailwind CSS" class="w-40 h-16 mb-2"/>
-            <span class="text-white">Tailwind CSS</span>
+          <div class="skills-grid-items">
+            <div class="skill-chip" data-skill="javascript">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>
+              </div>
+              <span class="skill-name">JavaScript</span>
+              <div class="skill-glow"></div>
+            </div>
+            <div class="skill-chip" data-skill="typescript">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"/>
+              </div>
+              <span class="skill-name">TypeScript</span>
+              <div class="skill-glow"></div>
+            </div>
+            <div class="skill-chip" data-skill="html">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/>
+              </div>
+              <span class="skill-name">HTML</span>
+              <div class="skill-glow"></div>
+            </div>
+            <div class="skill-chip" data-skill="css">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/>
+              </div>
+              <span class="skill-name">CSS</span>
+              <div class="skill-glow"></div>
+            </div>
+            <div class="skill-chip" data-skill="sql">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL"/>
+              </div>
+              <span class="skill-name">SQL</span>
+              <div class="skill-glow"></div>
+            </div>
+            <div class="skill-chip" data-skill="csharp">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#"/>
+              </div>
+              <span class="skill-name">C#</span>
+              <div class="skill-glow"></div>
+            </div>
           </div>
         </div>
+
+        <!-- Frameworks & Libraries Card -->
+        <div class="skill-category-card">
+          <div class="card-header">
+            <div class="category-icon backend-icon">
+              <span>🚀</span>
+            </div>
+            <h3 class="card-title">Frameworks & Libraries</h3>
+          </div>
+          <div class="skills-grid-items">
+            <div class="skill-chip" data-skill="angular">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular"/>
+              </div>
+              <span class="skill-name">Angular</span>
+              <div class="skill-glow"></div>
+            </div>
+            <div class="skill-chip" data-skill="dotnet">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET"/>
+              </div>
+              <span class="skill-name">.NET</span>
+              <div class="skill-glow"></div>
+            </div>
+            <div class="skill-chip" data-skill="ngrx">
+              <div class="skill-icon">
+                <img src="/assets/images/ngrx.svg" alt="NgRx"/>
+              </div>
+              <span class="skill-name">NgRx</span>
+              <div class="skill-glow"></div>
+            </div>
+            <div class="skill-chip" data-skill="rxjs">
+              <div class="skill-icon">
+                <img src="https://rxjs.dev/generated/images/marketing/home/Rx_Logo-512-512.png" alt="RxJS"/>
+              </div>
+              <span class="skill-name">RxJS</span>
+              <div class="skill-glow"></div>
+            </div>
+            <div class="skill-chip" data-skill="primeng">
+              <div class="skill-icon large-icon">
+                <img src="/assets/images/primeng.png" alt="PrimeNG"/>
+              </div>
+              <span class="skill-name">PrimeNG</span>
+              <div class="skill-glow"></div>
+            </div>
+            <div class="skill-chip" data-skill="angular-material">
+              <div class="skill-icon large-icon">
+                <img src="/assets/images/angular-material.-RTdTgeB-removebg-preview.png" alt="Angular Material"/>
+              </div>
+              <span class="skill-name">Angular Material</span>
+              <div class="skill-glow"></div>
+            </div>
+            <div class="skill-chip" data-skill="gsap">
+              <div class="skill-icon">
+                <img src="https://cdn.worldvectorlogo.com/logos/gsap-greensock.svg" alt="GSAP"/>
+              </div>
+              <span class="skill-name">GSAP</span>
+              <div class="skill-glow"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Technologies Card -->
+        <div class="skill-category-card">
+          <div class="card-header">
+            <div class="category-icon tools-icon">
+              <span>🛠️</span>
+            </div>
+            <h3 class="card-title">Tools & Technologies</h3>
+          </div>
+          <div class="skills-grid-items">
+            <div class="skill-chip" data-skill="firebase">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase"/>
+              </div>
+              <span class="skill-name">Firebase</span>
+              <div class="skill-glow"></div>
+            </div>
+            <div class="skill-chip" data-skill="tailwind">
+              <div style="width: 10rem;" class="skill-icon large-icon">
+                <img src="/assets/images/1_mUISLg4ghf6QYT_f1-cnlg.png" alt="Tailwind CSS"/>
+              </div>
+              <span class="skill-name">Tailwind CSS</span>
+              <div class="skill-glow"></div>
+            </div>
+            <div class="skill-chip" data-skill="scss">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="SCSS"/>
+              </div>
+              <span class="skill-name">SCSS</span>
+              <div class="skill-glow"></div>
+            </div>
+            <div class="skill-chip" data-skill="rest-apis">
+              <div class="skill-icon">
+                <span style="font-size: 1.5rem; font-weight: bold; color: #3b82f6;">API</span>
+              </div>
+              <span class="skill-name">REST APIs</span>
+              <div class="skill-glow"></div>
+            </div>
+            <div class="skill-chip" data-skill="git">
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/>
+              </div>
+              <span class="skill-name">Git</span>
+              <div class="skill-glow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
