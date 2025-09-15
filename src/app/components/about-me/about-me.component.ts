@@ -321,4 +321,15 @@ export class AboutMeComponent implements AfterViewInit {
       }
     });
   }
+
+  // Navigation method for CTA buttons
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
 }

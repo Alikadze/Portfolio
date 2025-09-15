@@ -27,13 +27,6 @@ export class FooterComponent {
       bgColor: 'bg-blue-600 hover:bg-blue-700'
     },
     {
-      name: 'Twitter',
-      url: 'https://twitter.com/rezoalikadze',
-      icon: 'chat',
-      emoji: '🐦',
-      bgColor: 'bg-sky-500 hover:bg-sky-600'
-    },
-    {
       name: 'Email',
       url: 'mailto:rezo.alikadze@gmail.com',
       icon: 'email',
