@@ -1,66 +1,50 @@
-import { Component, AfterViewInit, inject, PLATFORM_ID, HostListener, OnInit } from '@angular/core';
-import { FooterComponent } from "../footer/footer.component";
-import { AboutMeComponent } from "../about-me/about-me.component";
-import { SkillsComponent } from "../skills/skills.component";
-import { ProjectsComponent } from "../projects/projects.component";
-import { ContactMeComponent } from "../contact-me/contact-me.component";
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { isPlatformBrowser } from '@angular/common';
-import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { Component, AfterViewInit, inject, PLATFORM_ID, HostListener } from '@angular/core';
+import { isPlatformBrowser, CommonModule } from '@angular/common';
+import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from '../footer/footer.component';
+import { AboutMeComponent } from '../about-me/about-me.component';
+import { SkillsComponent } from '../skills/skills.component';
+import { ProjectsComponent } from '../projects/projects.component';
+import { ContactMeComponent } from '../contact-me/contact-me.component';
 
 @Component({
     selector: 'app-layout',
-    imports: [FooterComponent, AboutMeComponent, SkillsComponent, ProjectsComponent, ContactMeComponent, CommonModule, MatIconModule],
+    imports: [CommonModule, HeaderComponent, FooterComponent, AboutMeComponent, SkillsComponent, ProjectsComponent, ContactMeComponent],
     templateUrl: './layout.component.html',
     styleUrl: './layout.component.scss'
 })
-export class LayoutComponent implements OnInit, AfterViewInit {
+export class LayoutComponent implements AfterViewInit {
     platformId = inject(PLATFORM_ID);
     showScrollToTop = false;
-    isLoading = true;
 
     @HostListener('window:scroll', [])
     onWindowScroll() {
         if (isPlatformBrowser(this.platformId)) {
-            this.showScrollToTop = window.pageYOffset > 300;
+            this.showScrollToTop = window.scrollY > 600;
         }
-    }
-
-    ngOnInit(): void {
-        // Simulate loading time
-        setTimeout(() => {
-            this.isLoading = false;
-        }, 2000);
     }
 
     ngAfterViewInit(): void {
-        if (isPlatformBrowser(this.platformId)) {
-            gsap.registerPlugin(ScrollTrigger);
-            
-            // Animate sections as they come into view
-            gsap.utils.toArray('.section').forEach((section: any) => {
-                gsap.fromTo(section, 
-                    { 
-                        opacity: 0, 
-                        y: 50 
-                    },
-                    {
-                        opacity: 1,
-                        y: 0,
-                        duration: 1,
-                        ease: "power2.out",
-                        scrollTrigger: {
-                            trigger: section,
-                            start: "top 85%",
-                            end: "bottom 15%",
-                            toggleActions: "play none none reverse"
-                        }
-                    }
-                );
-            });
+        if (!isPlatformBrowser(this.platformId)) return;
+
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
         }
+        window.scrollTo(0, 0);
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.12 }
+        );
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
     }
 
     scrollToTop(): void {

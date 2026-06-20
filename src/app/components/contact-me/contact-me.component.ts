@@ -1,47 +1,24 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
+interface ContactItem {
+  label: string;
+  value: string;
+  href?: string;
+}
+
 @Component({
-    selector: 'app-contact-me',
-    imports: [FormsModule, CommonModule],
-    templateUrl: './contact-me.component.html',
-    styleUrl: './contact-me.component.scss'
+  selector: 'app-contact-me',
+  imports: [CommonModule],
+  templateUrl: './contact-me.component.html',
+  styleUrl: './contact-me.component.scss'
 })
 export class ContactMeComponent {
-  formData = {
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  };
+  email = 'ralikadze@gmail.com';
 
-  onSubmit() {
-    if (this.isFormValid()) {
-      // Here you would typically send the form data to a backend service
-      console.log('Form submitted:', this.formData);
-      
-      // For demo purposes, we'll just show an alert
-      alert('Thank you for your message! I\'ll get back to you soon.');
-      
-      // Reset form
-      this.resetForm();
-    }
-  }
-
-  private isFormValid(): boolean {
-    return !!(this.formData.name && 
-             this.formData.email && 
-             this.formData.subject && 
-             this.formData.message);
-  }
-
-  private resetForm() {
-    this.formData = {
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    };
-  }
+  items: ContactItem[] = [
+    { label: 'Email', value: 'ralikadze@gmail.com', href: 'mailto:ralikadze@gmail.com' },
+    { label: 'GitHub', value: 'github.com/Alikadze', href: 'https://github.com/Alikadze' },
+    { label: 'LinkedIn', value: 'linkedin.com/in/rezo-alikadze', href: 'https://linkedin.com/in/rezo-alikadze' },
+  ];
 }
