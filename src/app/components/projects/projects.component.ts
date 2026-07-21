@@ -23,6 +23,7 @@ export class ProjectsComponent {
       description: 'Internal Admin dashboard for Academic Affairs Management System of BSU (Batumi Shota Rustaveli State University).',
       image: './assets/images/img_8.png',
       tech: ['Angular', 'Nebula UI', 'NgRx'],
+      live: 'https://admin.mybsu.app/',
     },
     {
       title: 'BlackIt',
